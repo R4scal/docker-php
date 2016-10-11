@@ -20,7 +20,7 @@ RUN yum -y update; \
     yum -y install php-fpm php-bcmath php-gd php-json php-ldap php-mbstring php-mysqlnd php-opcache \
     php-pdo php-pear php-process php-tidy php-xml php-xmlrpc \
     php-pecl-igbinary php-pecl-memcache php-pecl-memcached php-pecl-msgpack php-pecl-mysql php-pecl-redis \
-    newrelic-php5 \
+    newrelic-php5; \
     yum clean all;
 
 # Map port
