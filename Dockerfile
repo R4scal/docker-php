@@ -4,7 +4,7 @@ MAINTAINER Rascal <rascal@rascal.su>
 
 LABEL name="CentOS PHP-FPM Image" \
       license="GPLv2" \
-      build-date="20161010"
+      build-date="20161015"
 
 # Add service user
 RUN groupadd -g 101 nginx; useradd -r -u 100 -g nginx nginx
