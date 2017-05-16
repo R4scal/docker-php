@@ -4,7 +4,7 @@ MAINTAINER Rascal <rascal@rascal.su>
 
 LABEL name="CentOS PHP-FPM Image" \
       license="GPLv2" \
-      build-date="20161113"
+      build-date="20170516"
 
 # Add service user
 RUN groupadd -g 101 nginx; useradd -r -u 100 -g nginx nginx
@@ -13,12 +13,12 @@ RUN groupadd -g 101 nginx; useradd -r -u 100 -g nginx nginx
 RUN rpm -Uhv https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm; \
     rpm -Uhv http://rpms.remirepo.net/enterprise/remi-release-7.rpm; \
     rpm -Uhv http://yum.newrelic.com/pub/newrelic/el5/x86_64/newrelic-repo-5-3.noarch.rpm; \
-    yum-config-manager --enable remi-php70
+    yum-config-manager --enable remi-php71
 
 # Install software
 RUN yum -y update; \
-    yum -y install php-fpm php-bcmath php-gd php-json php-ldap php-mbstring php-mysqlnd php-opcache \
-    php-pdo php-pear php-process php-tidy php-xml php-xmlrpc \
+    yum -y install php-fpm php-bcmath php-gd php-json php-ldap php-mbstring php-mysqlnd \
+    php-pdo php-pear php-process php-tidy php-xml php-xmlrpc php-opcache \
     php-pecl-igbinary php-pecl-memcache php-pecl-memcached php-pecl-msgpack php-pecl-mysql php-pecl-redis \
     newrelic-php5; \
     yum clean all;
